@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Harish S - UI/UX Designer and Frontend Developer Portfolio">
+  <title>Harish S | UI/UX Designer & Frontend Developer</title>
+  <link rel="icon" type="image/jpg" href="./images/profile.jpg">
+  <link rel="apple-touch-icon" href="./images/profile.jpg">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>Britto<span class="highlight"> Y</span></h1>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <a href="britto_resume.pdf" download="Britto_Y_Resume.pdf">
+              Resume <i class="fas fa-download"></i>
+            </a>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero section">
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-aos="fade-right">
+          <h2>Hi 👋, I'm <span class="highlight">Britto Y</span></h2>
+          <h3 class="typewriter">Cloud & Artificial Intelligence Student</h3>
+          <p class="hero-description">
+            IT student specializing in AI/ML. Skilled in Java, Salesforce, Generative AI, and DevOps. Passionate about solving real-world problems with hands-on tech projects.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn secondary">Let's Connect</a>
+            <a href="britto_resume.pdf" download="Britto_Y_Resume.pdf" class="btn primary">
+              <i class="fas fa-file-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:arokiyabritto307@gmail.com" class="social-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+          <div class="profile-img hero-profile">
+            <img src="./images/britto.jpg" alt="Britto Y - Professional Portrait" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section fade-in-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <div class="about-grid">
+        <div class="about-image" data-aos="fade-right">
+          <div class="profile-img about-profile">
+            <img src="./images/britto.jpg" alt="Britto Y - Working" />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+        <div class="about-content" data-aos="fade-left">
+          <div class="about-text">
+            <p>I'm a B.Tech IT student at Prince Shri Venkateshwara Padmavathy Engineering College, Chennai (2022–2026), passionate about Artificial Intelligence and Machine Learning. I enjoy building hands-on tech projects that solve real-world problems. My interests include Cloud Computing, Generative AI, Data Analytics, and DevOps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section fade-in-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h3>Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h3>Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+            <div class="skill-item"><i class="fas fa-desktop"></i> VMware</div>
+            <div class="skill-item"><i class="fas fa-code"></i> VS Code</div>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h3>Platforms & Concepts</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-ubuntu"></i> Ubuntu</div>
+            <div class="skill-item"><i class="fab fa-salesforce"></i> Salesforce (Admin/Dev)</div>
+            <div class="skill-item"><i class="fas fa-brain"></i> Generative AI</div>
+            <div class="skill-item"><i class="fas fa-cogs"></i> DevOps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-content">
+            <h3>Loan Approval Predictor (ML) – 2025</h3>
+            <p>Built a classifier using Logistic Regression and Decision Trees to predict loan approvals with preprocessed financial data.</p>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-content">
+            <h3>5G Session Manager – 2025</h3>
+            <p>Built a session control tool to start/stop UEs using nr-cli, with real-time logs via Open5GS and UERANSIM.</p>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-content">
+            <h3>Smart Bus Ticketing System – 2023</h3>
+            <p>Designed a multilingual e-ticketing app with auto seat allocation, digital reservations, and conductor verification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade-in-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-envelope"></i>
+            <p>Email : <a href="mailto:arokiyabritto307@gmail.com">arokiyabritto307@gmail.com</a></p>
+          </div>
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-phone"></i>
+            <p>Phone : <a href="tel:+919500752970">+91-9500752970</a></p>
+          </div>
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">linkedin.com/in/YOUR-LINKEDIN</a></p>
+          </div>
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
+            <i class="fab fa-github"></i>
+            <p>GitHub : <a href="https://github.com/YOUR-GITHUB" target="_blank">github.com/YOUR-GITHUB</a></p>
+          </div>
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Location : Chennai, India</p>
+          </div>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-aos="fade-left" data-aos-delay="100">
+          <input type="hidden" name="access_key" value="72177f1c-10cd-4b8e-93cd-0b4dad681e38">
+          <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
+          <input type="hidden" name="from_name" value="Portfolio Website">
+          <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <button type="submit" class="btn submit-btn" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Harish S • Crafted with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i>  | All rights reserved</p>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>
