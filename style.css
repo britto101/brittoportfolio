@@ -1,24 +1,26 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #3b82f6;
-    --text-color: #1f2937;
-    --bg-color: #ffffff;
-    --accent-color: #dbeafe;
-    --border-color: #e5e7eb;
+    --primary-color: #14213D;
+    --secondary-color: #FCA311;
+    --text-color: #000000;
+    --bg-color: #E5E5E5;
+    --accent-color: #FCA311;
+    --border-color: #E5E5E5;
     --container-width: 1200px;
     --transition: all 0.3s ease;
-    --primary-color-rgb: 37, 99, 235;
-    --secondary-color-rgb: 59, 130, 246;
+    --primary-color-rgb: 20, 33, 61;
+    --secondary-color-rgb: 252, 163, 17;
+    --card-bg-color: #fff;
   }
   
   /* Dark mode variables */
   [data-theme="dark"] {
-    --primary-color: #60a5fa;
-    --secondary-color: #3b82f6;
-    --text-color: #f3f4f6;
-    --bg-color: #111827;
-    --accent-color: #1f2937;
-    --border-color: #374151;
+    --primary-color: #FCA311;
+    --secondary-color: #14213D;
+    --text-color: #FFFFFF;
+    --bg-color: #14213D;
+    --accent-color: #FCA311;
+    --border-color: #FCA311;
+    --card-bg-color: #1a2235;
   }
   
   * {
@@ -31,22 +33,19 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background:
+        linear-gradient(to bottom, rgba(20,33,61,0.95) 0%, rgba(20,33,61,1) 60%),
+        url('./images/hero-bg.jpg') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
     transition: var(--transition);
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background: url('./images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
   }
   
   body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.5); /* Adjust opacity as needed */
-    z-index: 0;
-    pointer-events: none;
+    display: none;
   }
   
   /* Make sure your main content is above the overlay */
@@ -67,8 +66,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--bg-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1a2235;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     padding: 1rem 0;
   }
@@ -85,7 +84,7 @@
   }
   
   .highlight {
-    color: var(--primary-color);
+    color: #FCA311;
   }
   
   nav ul {
@@ -95,14 +94,14 @@
   }
   
   nav a {
-    color: var(--text-color);
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
   }
   
   nav a:hover {
-    color: var(--primary-color);
+    color: #FCA311;
   }
   
   #darkModeToggle {
@@ -116,12 +115,26 @@
   
   /* Hero Section */
   .hero {
-    padding: 8rem 0 4rem;
     position: relative;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    background:
+        linear-gradient(to bottom, rgba(20,33,61,0.95) 0%, rgba(20,33,61,1) 80%),
+        url('./images/hero-bg.jpg') no-repeat center top;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(20,33,61,0.7);
+    z-index: 0;
+  }
+  
+  .hero > * {
+    position: relative;
+    z-index: 1;
   }
   
   .hero-grid {
@@ -271,31 +284,27 @@
     flex-wrap: wrap;
   }
   
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
+  .btn, .btn.primary, .lets-connect, .btn-small, .submit-btn {
     text-decoration: none;
-    transition: var(--transition);
-    white-space: nowrap;
   }
   
-  .btn.primary {
-    background-color: var(--primary-color);
-    color: white;
+  .btn:hover, .btn.primary:hover, .lets-connect:hover, .btn-small:hover, .submit-btn:hover {
+    text-decoration: none;
   }
   
-  .btn.secondary {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+  .btn, .btn.primary, .lets-connect {
+    background-color: #FCA311;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    transition: background 0.3s;
   }
   
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  .btn:hover, .btn.primary:hover, .lets-connect:hover {
+    background-color: #d48806;
+    color: #fff;
   }
   
   .social-links a {
@@ -311,13 +320,17 @@
   
   /* Section Styles */
   .section {
+    background: var(--bg-color);
     padding: 5rem 0;
   }
   
   .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
+    color: #FCA311;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: left;
+    letter-spacing: 2px;
   }
   
   /* About Section */
@@ -532,8 +545,8 @@
   }
   
   .submit-btn {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #FCA311;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -783,4 +796,46 @@
     right: -15px;
     bottom: -15px;
     opacity: 0.3;
+  }
+
+  .card, .about-card, .service-card, .skills-card {
+    background: var(--card-bg-color, #fff);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    padding: 2rem;
+    color: var(--text-color);
+  }
+  
+  .about-title, .services-title, .skills-title {
+    color: #FCA311;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+  
+  .accent {
+    color: #FCA311;
+  }
+  
+  .submit-btn {
+    background-color: #FCA311;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Progress Bar for Skills */
+  .skill-bar {
+    background: #23304a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .skill-bar-fill {
+    background: #FCA311;
+    height: 12px;
+    border-radius: 8px;
   }
