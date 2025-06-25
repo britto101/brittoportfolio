@@ -52,7 +52,7 @@
   
   // Typewriter effect for hero section
   const typewriterText = document.querySelector('.typewriter');
-  const phrases = ['Cloud Developer', 'Artificial Intelligence'];
+  const phrases = ['Cloud', 'Artificial Intelligence'];
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
