@@ -99,7 +99,7 @@ nav ul li a:hover{
 }
 
 .hero-content h2{
-  font-size:3.5rem;
+  font-size:3.2rem;
   margin-bottom:10px;
 }
 
@@ -168,8 +168,8 @@ nav ul li a:hover{
 }
 
 .image-box{
-  width:350px;
-  height:350px;
+  width:220px;
+  height:220px;
   border-radius:50%;
   overflow:hidden;
   border:5px solid #FCA311;
@@ -473,8 +473,8 @@ footer{
   }
 
   .image-box{
-    width:250px;
-    height:250px;
+    width:180px;
+    height:180px;
   }
 
 }
